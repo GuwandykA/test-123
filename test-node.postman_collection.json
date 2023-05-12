@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "862c4ad2-aad7-4569-883b-1d98016b663d",
+		"name": "test-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/v1/sing-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Test\",\n    \"email\":\"test@test.com\",\n    \"phone\":\"123456789\",\n    \"password\":\"qwertyy\",\n    \"password_confirmation\":\"qwertyy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/sing-up",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sing-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/v1/sing-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"qwertyy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/sing-in",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sing-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/v1/blog/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNjZjJjMWU4LTJmMDQtNDUzNi1hYTBmLWMxMWUwYWMyZmRlZCIsImlhdCI6MTY4MzgyNTM2MSwiZXhwIjoxNjgzOTExNzYxfQ.1HmBoNbfcg8RP252d9RnoXttkFNCO4kV9qf6dRzhWDY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "author_name",
+							"value": "Test 12",
+							"type": "default"
+						},
+						{
+							"key": "desc",
+							"value": " content ",
+							"type": "default"
+						},
+						{
+							"key": "date_format",
+							"value": "23-12-2023",
+							"type": "default"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/guvandyk/Downloads/koala.mp4"
+						},
+						{
+							"key": "video",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/blog/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"blog",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/v1/blog/update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNjZjJjMWU4LTJmMDQtNDUzNi1hYTBmLWMxMWUwYWMyZmRlZCIsImlhdCI6MTY4MzgyNTM2MSwiZXhwIjoxNjgzOTExNzYxfQ.1HmBoNbfcg8RP252d9RnoXttkFNCO4kV9qf6dRzhWDY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "author_name",
+							"value": "Test 12",
+							"type": "default"
+						},
+						{
+							"key": "desc",
+							"value": " content ",
+							"type": "default"
+						},
+						{
+							"key": "date_format",
+							"value": "23-12-2023",
+							"type": "default"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/guvandyk/Downloads/summermusic.jpeg"
+						},
+						{
+							"key": "uuid",
+							"value": "2149a994-3b8f-44fe-9d61-68233271d3b4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/blog/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"blog",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/v1/blog/get-all",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"page\":\"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/blog/get-all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"blog",
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
